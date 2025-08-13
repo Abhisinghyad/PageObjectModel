@@ -5,6 +5,18 @@
 	<groupId>project</groupId>
 	<artifactId>project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.13.0</version>
+    <configuration>
+        <compilerArgs>
+            <arg>--add-opens</arg>
+            <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+        </compilerArgs>
+    </configuration>
+</plugin>
+
 	<dependencies>
 		<!-- Selenium Java -->
 		<dependency>
@@ -12,6 +24,14 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.20.0</version>
 		</dependency>
+
+		<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.34</version>
+    <scope>provided</scope>
+</dependency>
+
 
 		<!-- TestNG -->
 		<dependency>
